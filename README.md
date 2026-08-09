@@ -1,38 +1,51 @@
 # Neon Forge: City of Tomorrow
 
-A touch-first mobile idle/incremental game built with Godot 4.
+**Primary version: Browser/PWA — no Godot installation required.**
 
-## Implemented
-- 12 production zones and automated idle income
-- 108 upgrades with scaling costs and per-zone multipliers
-- 60 collectibles across six rarity tiers
-- 60 achievements (including hidden achievements)
+Neon Forge is a touch-first mobile idle/incremental game that runs directly in modern browsers and can be hosted for free with GitHub Pages.
+
+## Browser version
+Open `index.html` through a web server or enable GitHub Pages for this repository.
+
+### GitHub Pages
+1. Open this repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select branch **main** and folder **/(root)**.
+5. Click **Save**.
+6. GitHub will publish the game at the Pages URL shown in the Pages settings. For this repository the normal project-site address is `https://ardathsol.github.io/Godot/`.
+
+## Implemented in the browser version
+- 12 production zones with idle income
+- 108 upgrades with scaling prices and multipliers
+- 60 collectibles across six rarities
+- 60 achievements including secret achievements
 - 36 progression quests
 - Prestige/rebirth with permanent Cores
-- Offline progression (8h cap, 75% efficiency)
+- Offline progression with an 8-hour cap and 75% efficiency
 - Daily rewards
-- Modular event currency/progression loop
-- Save/load + versioned save schema
+- Event progression and Event Chips
 - Statistics
-- Touch-first portrait UI
-- Settings for sound/music/vibration/reduced motion
-- Localization system: German, English, French, Spanish, Italian, Portuguese
-- Mobile-safe viewport and Android-ready Godot project
+- Browser save system using `localStorage`
+- Save export to JSON
+- Touch-first responsive UI for phones, tablets and desktop
+- Haptic feedback where supported
+- German, English, French, Spanish, Italian and Portuguese
+- PWA manifest + service worker for installable/offline behavior
 
-## Run
-1. Install Godot 4.3+
-2. Import `project.godot`
-3. Press F6/F5
+## Main web files
+- `index.html` — browser entry point
+- `styles.css` — responsive mobile UI
+- `app.js` — all gameplay, economy, save, progression and UI logic
+- `manifest.webmanifest` — installable PWA configuration
+- `sw.js` — offline cache/service worker
+- `icon.svg` — app icon
+- `.nojekyll` — static GitHub Pages configuration
 
-## Android export
-Install Android build templates in Godot, configure JDK/Android SDK, then create an Android export preset.
+## Save data
+Progress is stored locally in the browser. Different browsers/devices have separate saves unless the exported JSON save is transferred manually.
 
-## Project structure
-- `scenes/Main.tscn` – main scene
-- `scripts/main.gd` – UI/gameplay orchestration
-- `scripts/game_state.gd` – save/load/migration
-- `scripts/game_content.gd` – generated content definitions
-- `scripts/localization.gd` – six-language localization
-- `docs/GAME_DESIGN.md` – design and progression specification
+## Legacy Godot files
+The previous Godot implementation is still present in the repository as reference, but it is **not required** to run or test the current game.
 
 No paid assets or plugins are required.
