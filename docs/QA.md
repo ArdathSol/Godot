@@ -1,0 +1,19 @@
+# QA checklist
+- [x] Project structure complete
+- [x] Main scene configured
+- [x] Save schema versioning
+- [x] Offline cap logic
+- [x] Manual production loop
+- [x] Automatic production loop
+- [x] Upgrade costs and effects
+- [x] Zone unlocking
+- [x] Quest rewards
+- [x] Achievement checks
+- [x] Collectible drops and bonuses
+- [x] Prestige persistence rules
+- [x] Daily reward date gate
+- [x] Event exchange
+- [x] Language switching
+- [x] Reset confirmation
+- [ ] Device-specific Android/iOS smoke test (requires Godot/mobile export runtime)
+- [ ] Final audio assets (system hooks/settings exist; project intentionally ships without paid assets)
